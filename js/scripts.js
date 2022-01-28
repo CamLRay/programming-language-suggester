@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  //User interface logic
   $("#btnOne").click(function() {
     if($("input[type='radio'][name='questOne']").is(":checked")) {
       $("#questOne").addClass("hidden")
@@ -35,12 +36,41 @@ $(document).ready(function() {
     }
   });
 
+
   $("form#quiz").submit(function(e) {
+    e.preventDefault();
     const questOne = $("input[type='radio'][name='questOne']:checked").val();
     const questTwo = $("input[type='radio'][name='questTwo']:checked").val();
     const questThree = $("input[type='radio'][name='questThree']:checked").val();
     const questFour = $("input[type='radio'][name='questFour']:checked").val();
     const questFive = $("input[type='radio'][name='questFive']:checked").val();
-    e.preventDefault();
+
+    if (questOne === "web") {
+      if (questTwo === "front") {
+        alert("javascript")
+      } else {
+        if (questThree === "new"){
+          alert("Python")
+        } else {
+          if (questFour === "jobs") {
+            alert("Ruby")
+          } else if (questFour === "woz") {
+            alert("Java")
+          } else {
+            alert("PHP")
+          }
+        }
+      }
+    } else if (questOne === "game") {
+
+    } else if (questOne === "machine") {
+
+    } else {
+
+    }
   });
 });
+
+function cSharp() {
+  alert("C# is the language for you");
+}
