@@ -44,33 +44,67 @@ $(document).ready(function() {
     const questThree = $("input[type='radio'][name='questThree']:checked").val();
     const questFour = $("input[type='radio'][name='questFour']:checked").val();
     const questFive = $("input[type='radio'][name='questFive']:checked").val();
-
-    if (questOne === "web") {
-      if (questTwo === "front") {
-        alert("javascript")
-      } else {
-        if (questThree === "new"){
-          alert("Python")
+      if (questOne === "web") {
+        if (questTwo === "front") {
+          alert("javascript")
         } else {
-          if (questFour === "jobs") {
-            alert("Ruby")
-          } else if (questFour === "woz") {
-            alert("Java")
+          if (questThree === "new"){
+            alert("Python")
           } else {
-            alert("PHP")
+            if (questFour === "jobs") {
+              alert("Ruby")
+            } else if (questFour === "woz") {
+              alert("Java")
+            } else {
+              alert("PHP")
+            }
           }
         }
+      } else if (questOne === "game") {
+        if (questFour === "woz") {
+          alert("C++")
+        } else if (questFour === "minecraft") {
+          alert("java")
+        } else {
+          alert("c#")
+        }
+      } else if (questOne === "machine") {
+        alert("python")
+      } else {
+        if (questFive === "yes") {
+          alert("python")
+        } else {
+        alert("swift")
+        }
       }
-    } else if (questOne === "game") {
-
-    } else if (questOne === "machine") {
-
-    } else {
-
-    }
+      $("#questFive").addClass("hidden")
   });
 });
 
 function cSharp() {
-  alert("C# is the language for you");
+  $("#cSharp").removeClass("hidden")
+}
+
+function java() {
+  $("#java").removeClass("hidden")
+}
+
+function python() {
+  $("#python").removeClass("hidden")
+}
+
+function ruby() {
+  $("#ruby").removeClass("hidden")
+}
+
+function php() {
+  $("#php").removeClass("hidden")
+}
+
+function cPlusPlus() {
+  $("#cPlusPlus").removeClass("hidden")
+}
+
+function javascript() {
+  $("#javascript").removeClass("hidden")
 }
