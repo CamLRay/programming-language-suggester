@@ -46,65 +46,77 @@ $(document).ready(function() {
     const questFive = $("input[type='radio'][name='questFive']:checked").val();
       if (questOne === "web") {
         if (questTwo === "front") {
-          alert("javascript")
+          if (questThree === "new"){
+            javascript("Javascript is always being improved by additional frameworks and libraries. You may be interested in Angular or React!");
+          } else {
+            javascript();
+          }
         } else {
           if (questThree === "new"){
-            alert("Python")
+            python("Python is growing in popularity for backend web development");
           } else {
             if (questFour === "jobs") {
-              alert("Ruby")
+              ruby();
             } else if (questFour === "woz") {
-              alert("Java")
+              java();
             } else {
-              alert("PHP")
+              php();
             }
           }
         }
       } else if (questOne === "game") {
         if (questFour === "woz") {
-          alert("C++")
+          cPlusPlus();
         } else if (questFour === "minecraft") {
-          alert("java")
+          java("Java is one of the best game development languages. The best selling game of all time Minecraft, was coded in Java!");
         } else {
-          alert("c#")
+          cSharp();
         }
       } else if (questOne === "machine") {
-        alert("python")
+        python();
       } else {
         if (questFive === "yes") {
-          alert("python")
+          python("computers are not very smart, but pythong can make them act smart!");
         } else {
-        alert("swift")
+        swift();
         }
       }
-      $("#questFive").addClass("hidden")
+      $("#questFive").addClass("hidden");
+      $("#result").removeClass("hidden")
   });
 });
 
 function cSharp() {
-  $("#cSharp").removeClass("hidden")
+  $("#cSharp").removeClass("hidden");
 }
 
-function java() {
-  $("#java").removeClass("hidden")
+function java(message) {
+  $("#java").removeClass("hidden");
+  $("#java-message").text(message);
 }
 
-function python() {
-  $("#python").removeClass("hidden")
+function python(message) {
+  $("#python").removeClass("hidden");
+  $("pyth-message").text(message);
 }
 
 function ruby() {
-  $("#ruby").removeClass("hidden")
+  $("#ruby").removeClass("hidden");
 }
 
 function php() {
-  $("#php").removeClass("hidden")
+  $("#php").removeClass("hidden");
 }
 
 function cPlusPlus() {
-  $("#cPlusPlus").removeClass("hidden")
+  $("#cPlusPlus").removeClass("hidden");
 }
 
-function javascript() {
-  $("#javascript").removeClass("hidden")
+function javascript(message) {
+  $("#javascript").removeClass("hidden");
+  $("#js-message").text(message);
+}
+
+function swift() {
+  $("#swift").removeClass("hidden");
 }
