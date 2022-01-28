@@ -10,78 +10,78 @@
 <body>
   <h1>Take the quize to learn which programming language is right for you!</h1>
   <div class="container">
-    <form>
+    <form id="quiz">
       <div id="questOne">
         <p>What interests you about programming?</p>
         <div class="form-check">
-          <input type="radio" name="code_language" id="webDev" class="form-check-input">
+          <input type="radio" name="questOne" id="webDev" class="form-check-input" value="web">
           <label for="webDev" class="form-check-label">Web Development</label>
         </div>
         <div class="form-check">
-          <input type="radio" name="code_language" id="gameDev" class="form-check-input">
+          <input type="radio" name="questOne" id="gameDev" class="form-check-input" value="game">
           <label for="gameDev" class="form-check-label">Game Development</label>
         </div>
         <div class="form-check">
-          <input type="radio" name="code_language" id="machLrn" class="form-check-input">
+          <input type="radio" name="questOne" id="machLrn" class="form-check-input" value="machine">
           <label for="machLrn" class="form-check-label">Machine Learning</label>
         </div>
         <div class="form-check">
-          <input type="radio" name="code_language" id="mobDev" class="form-check-input">
+          <input type="radio" name="questOne" id="mobDev" class="form-check-input" value="mobile">
           <label for="mobDev" class="form-check-label">Mobile Applications</label>
         </div>
-        <input type="button" value="Next">
+        <input id="btnOne" type="button" value="Next">
         </div>
         <div id="questTwo" class="hidden">
           <p>Whats important to you?</p>
           <div class="form-check">
-            <input type="radio" name="code_language" id="frontEnd" class="form-check-input">
+            <input type="radio" name="questTwo" id="frontEnd" class="form-check-input" value="front">
             <label for="ux" class="form-check-label">The look and feel of the final product</label>
           </div>
           <div class="form-check">
-            <input type="radio" name="code_language" id="backEnd" class="form-check-input">
+            <input type="radio" name="questTwo" id="backEnd" class="form-check-input" value="back">
             <label for="backEnd" class="form-check-label">The infrastructure of the final product</label>
           </div>
-          <input type="button" value="Next">
+          <input id="btnTwo" type="button" value="Next">
         </div>
 
         <div id="questThree" class="hidden">
           <p>New sports car or Reliable and affordable used car?</p>
           <div class="form-check">
-            <input type="radio" name="code_language" id="newCar" class="form-check-input">
+            <input type="radio" name="questThree" id="newCar" class="form-check-input" value="new">
             <label for="newCar" class="form-check-label">New sports car</label>
           </div>
           <div class="form-check">
-            <input type="radio" name="code_language" id="sportCar" class="form-check-input">
+            <input type="radio" name="questThree" id="sportCar" class="form-check-input" value="used">
             <label for="sportCar" class="form-check-label">Reliable used car</label>
           </div>
-          <input type="button" value="Next">
+          <input id="btnThree" type="button" value="Next">
         </div>
 
         <div id="questFour" class="hidden">
           <p>Which steve are you?</p>
           <div class="form-check">
-            <input type="radio" name="code_language" id="steveJ" class="form-check-input">
+            <input type="radio" name="questFour" id="steveJ" class="form-check-input" value="jobs">
             <label for="steveJ" class="form-check-label">Jobs</label>
           </div>
           <div class="form-check">
-            <input type="radio" name="code_language" id="steveW" class="form-check-input">
+            <input type="radio" name="questFour" id="steveW" class="form-check-input" value="woz">
             <label for="steveW" class="form-check-label">Wozniak</label>
           </div>
           <div class="form-check">
-            <input type="radio" name="code_language" id="steveM" class="form-check-input">
+            <input type="radio" name="questFour" id="steveM" class="form-check-input" value="minecraft">
             <label for="steveM" class="form-check-label">Minecraft Steve</label>
           </div>
-          <input type="button" value="Next">
+          <input id="btnFour" type="button" value="Next">
         </div>
 
         <div id="questFive" class="hidden">
           <p>Are computers smart?</p>
           <div class="form-check">
-            <input type="radio" name="code_language" id="frontEnd" class="form-check-input">
+            <input type="radio" name="code_language" id="frontEnd" class="form-check-input" value="yes">
             <label for="ux" class="form-check-label">Yes</label>
           </div>
           <div class="form-check">
-            <input type="radio" name="code_language" id="program" class="form-check-input">
+            <input type="radio" name="code_language" id="program" class="form-check-input" value="no">
             <label for="program" class="form-check-label">No</label>
           </div>
           <input type="submit" value="Finish Quiz">
