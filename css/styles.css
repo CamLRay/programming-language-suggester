@@ -4,5 +4,13 @@
 
 #error {
   color: red;
-  margin-left: 9rem;
+  justify-content:center;
+}
+
+#result {
+  margin: 10vw;
+}
+.container {
+  display:flex;
+  justify-content: center;
 }

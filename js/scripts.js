@@ -1,5 +1,45 @@
-$(document).ready(function() {
   //User interface logic
+function cSharp(message) {
+  $("#cSharp").removeClass("hidden");
+  $(".message").text(message);
+}
+
+function java(message) {
+  $("#java").removeClass("hidden");
+  $(".message").text(message);
+}
+
+function python(message) {
+  $("#python").removeClass("hidden");
+  $(".message").text(message);
+}
+
+function ruby(message) {
+  $("#ruby").removeClass("hidden");
+  $(".message").text(message);
+}
+
+function php(message) {
+  $("#php").removeClass("hidden");
+  $(".message").text(message);
+}
+
+function cPlusPlus(message) {
+  $("#cPlusPlus").removeClass("hidden");
+  $(".message").text(message);
+}
+
+function javaScript(message) {
+  $("#javaScript").removeClass("hidden");
+  $(".message").text(message);
+}
+
+function swift(message) {
+  $("#swift").removeClass("hidden");
+  $(".message").text(message);
+}
+
+$(document).ready(function() {
   $("#btnOne").click(function() {
     if($("input[type='radio'][name='questOne']").is(":checked")) {
       $("#questOne").addClass("hidden")
@@ -36,87 +76,58 @@ $(document).ready(function() {
     }
   });
 
-
+ //business logic
   $("form#quiz").submit(function(e) {
     e.preventDefault();
-    const questOne = $("input[type='radio'][name='questOne']:checked").val();
-    const questTwo = $("input[type='radio'][name='questTwo']:checked").val();
-    const questThree = $("input[type='radio'][name='questThree']:checked").val();
-    const questFour = $("input[type='radio'][name='questFour']:checked").val();
-    const questFive = $("input[type='radio'][name='questFive']:checked").val();
-      if (questOne === "web") {
-        if (questTwo === "front") {
-          if (questThree === "new"){
-            javascript("Javascript is always being improved by additional frameworks and libraries. You may be interested in Angular or React!");
+    const resultOne = $("input[type='radio'][name='questOne']:checked").val();
+    const resultTwo = $("input[type='radio'][name='questTwo']:checked").val();
+    const resultThree = $("input[type='radio'][name='questThree']:checked").val();
+    const resultFour = $("input[type='radio'][name='questFour']:checked").val();
+    const resultFive = $("input[type='radio'][name='questFive']:checked").val();
+      if (resultOne === "web") {
+        if (resultTwo === "front") {
+          if (resultThree === "new"){
+            javaScript("Javascript is always being improved by additional frameworks and libraries. You may be interested in Angular or React!");
           } else {
-            javascript();
+            javaScript();
           }
         } else {
-          if (questThree === "new"){
+          if (resultThree === "new"){
             python("Python is growing in popularity for backend web development");
           } else {
-            if (questFour === "jobs") {
+            if (resultFour === "jobs") {
               ruby();
-            } else if (questFour === "woz") {
+            } else if (resultFour === "woz") {
               java();
             } else {
               php();
             }
           }
         }
-      } else if (questOne === "game") {
-        if (questFour === "woz") {
+      } else if (resultOne === "game") {
+        if (resultFour === "woz") {
           cPlusPlus();
-        } else if (questFour === "minecraft") {
+        } else if (resultFour === "minecraft") {
           java("Java is one of the best game development languages. The best selling game of all time Minecraft, was coded in Java!");
         } else {
           cSharp();
         }
-      } else if (questOne === "machine") {
+      } else if (resultOne === "machine") {
         python();
       } else {
-        if (questFive === "yes") {
-          python("computers are not very smart, but pythong can make them act smart!");
+        if (resultFive === "yes") {
+          python("computers are not very smart, but python can make them seem really smart!");
         } else {
         swift();
         }
       }
       $("#questFive").addClass("hidden");
-      $("#result").removeClass("hidden")
+      $("#retake").removeClass("hidden");
+  });
+
+  $("#retake").click(function(){
+    $("#retake").addClass("hidden");
+    $(".result").addClass("hidden");
+    $("#questOne").removeClass("hidden");
   });
 });
-
-function cSharp() {
-  $("#cSharp").removeClass("hidden");
-}
-
-function java(message) {
-  $("#java").removeClass("hidden");
-  $("#java-message").text(message);
-}
-
-function python(message) {
-  $("#python").removeClass("hidden");
-  $("pyth-message").text(message);
-}
-
-function ruby() {
-  $("#ruby").removeClass("hidden");
-}
-
-function php() {
-  $("#php").removeClass("hidden");
-}
-
-function cPlusPlus() {
-  $("#cPlusPlus").removeClass("hidden");
-}
-
-function javascript(message) {
-  $("#javascript").removeClass("hidden");
-  $("#js-message").text(message);
-}
-
-function swift() {
-  $("#swift").removeClass("hidden");
-}
