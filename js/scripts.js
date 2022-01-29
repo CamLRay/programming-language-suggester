@@ -89,37 +89,37 @@ $(document).ready(function() {
           if (resultThree === "new"){
             javaScript("Javascript is always being improved by additional frameworks and libraries. You may be interested in Angular or React!");
           } else {
-            javaScript();
+            javaScript("");
           }
         } else {
           if (resultThree === "new"){
             python("Python is growing in popularity for backend web development");
           } else {
             if (resultFour === "jobs") {
-              ruby();
+              ruby("");
             } else if (resultFour === "woz") {
-              java();
+              java("");
             } else {
-              php();
+              php("");
             }
           }
         }
       } else if (resultOne === "game") {
         if (resultFour === "woz") {
-          cPlusPlus();
+          cPlusPlus("");
         } else if (resultFour === "minecraft") {
           java("Java is one of the best game development languages. The best selling game of all time Minecraft, was coded in Java!");
         } else {
-          cSharp();
+          cSharp("");
         }
       } else if (resultOne === "machine") {
-        python();
-      } else {
         if (resultFive === "yes") {
           python("computers are not very smart, but python can make them seem really smart!");
         } else {
-        swift();
+          python("We agree that computers aren't smart, with machine learning Python can make them seem smart.");
         }
+      } else {
+        swift("");
       }
       $("#questFive").addClass("hidden");
       $("#retake").removeClass("hidden");
