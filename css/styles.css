@@ -1,16 +1,37 @@
+* {
+  transition: background-color 1s ease;
+}
 body {
   font-size: 1.5em;
 }
+.dark {
+  background-color: #36393E;
+  color: white;
+}
+
+.banner {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+  text-align: center;
+  display:flex;
+}
+.banner--dark {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #1d1e20;
+  color: white;
+  border-radius: 0.3rem;
+  text-align: center;
+}
+
 input[type=radio] {
   margin-top:.9rem;
   transform: scale(1.5);
 }
 input[type=button] {
   padding:0rem 1rem .5rem 1rem;
-}
-
-.jumbotron {
-  text-align:center;
 }
 
 .hidden {
@@ -34,4 +55,15 @@ img {
   width:10vw;
   padding:1rem;
   float:left;
+}
+
+input[name='theme'] {
+  position:relative;
+  margin-top: -.9em;
+}
+
+#switch__label {
+  margin-top:-2em;
+  padding-left:.2em;
+  font-size: .5em;
 }

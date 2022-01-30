@@ -42,37 +42,37 @@ function swift(message) {
 $(document).ready(function() {
   $("#btnOne").click(function() {
     if($("input[type='radio'][name='questOne']").is(":checked")) {
-      $("#questOne").addClass("hidden")
-      $("#questTwo").removeClass("hidden")
-      $("#error").addClass("hidden")
+      $("#questOne").addClass("hidden");
+      $("#questTwo").removeClass("hidden");
+      $("#error").addClass("hidden");
     } else
-    $("#error").removeClass("hidden")
+    $("#error").removeClass("hidden");
   });
   $("#btnTwo").click(function() {
     if($("input[type='radio'][name='questTwo']").is(":checked")) {
-      $("#questTwo").addClass("hidden")
-      $("#questThree").removeClass("hidden")
-      $("#error").addClass("hidden")
+      $("#questTwo").addClass("hidden");
+      $("#questThree").removeClass("hidden");
+      $("#error").addClass("hidden");
     } else {
       $("#error").removeClass("hidden");
     }
   });
   $("#btnThree").click(function() {
     if($("input[type='radio'][name='questThree']").is(":checked")) {
-      $("#questThree").addClass("hidden")
-      $("#questFour").removeClass("hidden")
-      $("#error").addClass("hidden")
+      $("#questThree").addClass("hidden");
+      $("#questFour").removeClass("hidden");
+      $("#error").addClass("hidden");
     } else {
-      $("#error").removeClass("hidden")
+      $("#error").removeClass("hidden");
     }
   });
   $("#btnFour").click(function() {
     if($("input[type='radio'][name='questFour']").is(":checked")) {
-      $("#questFour").addClass("hidden")
-      $("#questFive").removeClass("hidden")
-      $("#error").addClass("hidden")
+      $("#questFour").addClass("hidden");
+      $("#questFive").removeClass("hidden");
+      $("#error").addClass("hidden");
     } else {
-      $("#error").removeClass("hidden")
+      $("#error").removeClass("hidden");
     }
   });
 
@@ -81,6 +81,20 @@ $(document).ready(function() {
     $(".result").addClass("hidden");
     $("#questOne").removeClass("hidden");
   });
+
+  $("input[name='theme']").change(function() {
+    var isChecked = $("input[name='theme']").is(":checked");
+    if(isChecked) {
+    $("#theme").addClass("dark");
+    $("#banner").addClass("banner--dark")
+    } else {
+      $("#theme").removeClass("dark");
+      $("#banner").removeClass("banner--dark")
+    }
+  });
+    
+
+  
 
  //business logic
   $("form#quiz").submit(function(e) {
@@ -92,13 +106,13 @@ $(document).ready(function() {
     const resultFive = $("input[type='radio'][name='questFive']:checked").val();
       if (resultOne === "web") {
         if (resultTwo === "front") {
-          if (resultThree === "new"){
+          if (resultThree === "new") {
             javaScript("Javascript is always being improved by additional frameworks and libraries. You may be interested in Angular or React!");
           } else {
             javaScript("");
           }
         } else {
-          if (resultThree === "new"){
+          if (resultThree === "new") {
             python("Python is growing in popularity for backend web development.");
           } else {
             if (resultFour === "jobs") {
