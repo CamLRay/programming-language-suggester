@@ -99,7 +99,7 @@ $(document).ready(function() {
           }
         } else {
           if (resultThree === "new"){
-            python("Python is growing in popularity for backend web development");
+            python("Python is growing in popularity for backend web development.");
           } else {
             if (resultFour === "jobs") {
               ruby("");
