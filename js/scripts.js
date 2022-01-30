@@ -76,6 +76,12 @@ $(document).ready(function() {
     }
   });
 
+  $("#retake").click(function(){
+    $("#retake").addClass("hidden");
+    $(".result").addClass("hidden");
+    $("#questOne").removeClass("hidden");
+  });
+
  //business logic
   $("form#quiz").submit(function(e) {
     e.preventDefault();
@@ -110,11 +116,11 @@ $(document).ready(function() {
         } else if (resultFour === "minecraft") {
           java("Java is one of the best game development languages. The best selling game of all time Minecraft, was coded in Java!");
         } else {
-          cSharp("");
+          cSharp("C# is one of the most popular langauges to write in Unity for game creation.");
         }
       } else if (resultOne === "machine") {
         if (resultFive === "yes") {
-          python("computers are not very smart, but python can make them seem really smart!");
+          python("Computers are not very smart, but python can make them seem really smart!");
         } else {
           python("We agree that computers aren't smart, with machine learning Python can make them seem smart.");
         }
@@ -123,11 +129,5 @@ $(document).ready(function() {
       }
       $("#questFive").addClass("hidden");
       $("#retake").removeClass("hidden");
-  });
-
-  $("#retake").click(function(){
-    $("#retake").addClass("hidden");
-    $(".result").addClass("hidden");
-    $("#questOne").removeClass("hidden");
   });
 });
