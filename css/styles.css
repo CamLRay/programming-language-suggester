@@ -15,7 +15,6 @@ body {
   background-color: #e9ecef;
   border-radius: 0.3rem;
   text-align: center;
-  display:flex;
 }
 .banner--dark {
   padding: 2rem 1rem;
@@ -58,12 +57,17 @@ img {
 }
 
 input[name='theme'] {
-  position:relative;
+  justify-content: right;
   margin-top: -.9em;
+  justify-content: right;
 }
 
 #switch__label {
   margin-top:-2em;
   padding-left:.2em;
   font-size: .5em;
+}
+#theme-button {
+  float:right;
+  margin-top: -1.5em;
 }
