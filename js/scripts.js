@@ -82,17 +82,12 @@ $(document).ready(function() {
     $("#questOne").removeClass("hidden");
   });
 
-  $("input[name='theme']").change(function() {
-    var isChecked = $("input[name='theme']").is(":checked");
-    if(isChecked) {
-    $("#theme").addClass("dark");
-    $("#banner").addClass("banner--dark")
-    } else {
-      $("#theme").removeClass("dark");
-      $("#banner").removeClass("banner--dark")
-    }
-  });
-    
+
+ $("input[name='theme']").change(function() {
+  $("#theme").toggleClass("dark");
+  $("#banner").toggleClass("banner--dark")
+ });
+
 
   
 
